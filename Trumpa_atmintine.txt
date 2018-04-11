@@ -1,0 +1,31 @@
+﻿Pagrindiniai faktai:
+
+1) Kurimo aplinka: Visual Studio Community 2015,
+
+1.1) Testavimo aplinka - Google Chrome, Version 65.0.3325.181 (Official Build) (64-bit) :-)
+
+2) Sprendimui panaudotas 'ASP.NET Web Application' tuščias šablonas,
+
+3) Klientinė dalis realizuota su Javascript (ES6) + ReactJS (15.5.0), (https://github.com/MaksZ/SquaresDemo/tree/master/SquaresDemo/scripts),
+
+3,1)  gražiam vaizdui pasiekti padėjo 'material-ui' npm paketas (https://material-ui-next.com/)
+
+4) Unit testai parašyti su C# (https://github.com/MaksZ/SquaresDemo/tree/master/SquaresDemo.Tests/Geometry)
+
+4) Klientinės dalies kompiliavimui panaudotas Babel kompiliatorius, WebPack - .js skriptų apjungimui į vieną bundle.js failą.
+
+5) Kvadratų paieškos algoritmas - gana trivialus: duotam masyve taškų ieškome trejetų, kuriems susiformuotų status kampas, tuomet likusiuose taškuose ieškome ketvirto, kuris galėtų užbaigti kvadratą.
+5.1) reikia prisipažinti, algoritmo greitaveika tobulintina: vien tik 900 (30x30) taškų tinklas tipo (m,n), kur m,n - 0, ..., 29, apdorojamas per 12 sekundžių,
+žr. SquaresDemo.Tests\AlgorithmsTests.cs, metodas  FindSquaresShouldNotRunTooLong() (jis visada "raudonas", skirtas tik parodyti laiką)
+
+6) Duomenų atvaizdavimas: 
+6.1) taškų sąrašas turi keturis stulpelius: 1) langelis pažymėti tašką trinimui, 2) taško unikalus Id, 3) taško X koordinatė, 4) taško Y koordinatė
+6.2) kvadratų sąrašas: 1) kvadrato eilės numeris, 2) kvadrato taškai išreikšti jų Id'ais, pvz [1, 2, 3 , 4] - kvadratas kurį sudaro taškai su Id'ais 1, 2, 3 ir 4
+
+7) Darbas su duomenimis:
+7.1) Įvedimas: galima užduoti taškus pavieniui, arba importuoti iš failo 
+7.2) Saugojimas: dešinėje programos pusėje yra tris slotai, kuriuose galima patalpinti įvestus (į taškų sąrašą) taškus, paspaudus mygtuką SAVE, 
+7.2.1) kai taškai į slotą patalpinti, rodomas saugomų taškų kiekis, juos galima užkrauti vėl į taškų sąrašą, paspaudus mygtuką LOAD,
+7.2.2) išvalyti slotą galima su mygtuku CLEAR;
+7.2.3) demonstraciniai versijai perspėjimo pranešimai nenumatyti, mygtukai suveikia iš karto.
+7.3) Norint pamatyti kvadratus, reikia paspausti mygtuką GET SQUARES; pridėjus naujų taškų, kvadratai automatiškai nepersiskaičiuoja.

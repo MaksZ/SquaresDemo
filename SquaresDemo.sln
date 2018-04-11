@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresDemo", "SquaresDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresDemo.Tests", "SquaresDemo.Tests\SquaresDemo.Tests.csproj", "{877125A4-F41A-40CA-903E-B662C2B84C5B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3CB7A2EE-2976-4D80-A8F0-B6F7183A2E3A}"
+	ProjectSection(SolutionItems) = preProject
+		Trumpa_atmintine.txt = Trumpa_atmintine.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
