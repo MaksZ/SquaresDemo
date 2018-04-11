@@ -21,6 +21,7 @@
 bld/
 [Bb]in/
 [Oo]bj/
+LocalPublish/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -143,7 +144,7 @@ publish/
 # TODO: Un-comment the next line if you do not want to checkin
 # your web deploy settings because they may include unencrypted
 # passwords
-#*.pubxml
+*.pubxml
 *.publishproj
 
 # NuGet Packages
